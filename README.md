@@ -1,0 +1,1 @@
+![Rust](https://github.com/Monsieur-Wary/zero-2-prod/workflows/Rust/badge.svg?branch=master)
