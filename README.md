@@ -1,2 +1,2 @@
-![Build](https://github.com/Monsieur-Wary/zero-2-prod/workflows/Rust/badge.svg?branch=master)
+![Build](https://github.com/Monsieur-Wary/zero-2-prod/workflows/Rust%20build/badge.svg?branch=master)
 ![Security](https://github.com/Monsieur-Wary/zero-2-prod/workflows/Security%20audit/badge.svg?branch=master)
