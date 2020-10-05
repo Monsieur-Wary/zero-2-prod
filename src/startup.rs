@@ -1,6 +1,7 @@
 use crate::routes;
 use actix_web::dev::Server;
 use actix_web::{web, App, HttpServer};
+use tracing_actix_web::TracingLogger;
 
 pub fn run(
     listener: std::net::TcpListener,
@@ -10,6 +11,7 @@ pub fn run(
 
     let server = HttpServer::new(move || {
         App::new()
+            .wrap(TracingLogger)
             .route("/health_check", web::get().to(routes::health_check))
             .route("/subscriptions", web::post().to(routes::subscribe))
             .app_data(web::Data::clone(&db_pool))

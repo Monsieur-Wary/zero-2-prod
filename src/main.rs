@@ -1,5 +1,10 @@
+use zero_2_prod::telemetry;
+
 #[actix_rt::main]
 async fn main() -> std::io::Result<()> {
+    let subscriber = telemetry::get_subscriber("zero2prod".into(), "info".into());
+    telemetry::init_subscriber(subscriber);
+
     let configuration =
         zero_2_prod::configuration::get_configuration().expect("Failed to read configuration.");
     let connection = sqlx::PgPool::connect(&configuration.database.connection_string())
